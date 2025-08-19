@@ -2,7 +2,36 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+class Solution {
+public:
+    bool checkValidString(string s) {
+        int min = 0;
+        int max = 0;
+
+        for (int i = 0; i < s.size(); i++)
+        {
+            if(s[i] == '('){
+                min++;
+                max++;
+            } else if(s[i] == ')'){
+                min--;
+                max--;
+            } else {
+                min = min - 1;
+                max = max + 1;
+            }
+            if(min < 0) min = 0;
+            if(max < min ) return false;
+        }
+        return (min == 0);
+    }
+};
+
 int main()
 {
+    string str = "(*)";
+    Solution sh;
+    cout<<sh.checkValidString(str);
+
  return 0;
 }
