@@ -1,7 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-
+/*
 int candy(vector<int> &arr)
 {
     vector<int> left(arr.size());
@@ -35,6 +35,39 @@ int candy(vector<int> &arr)
 
     return ans;
 
+}
+*/
+// Space complexity optimized
+int candy(vector<int> &arr){
+    int i = 1; int down = 0;
+    int ans = 0; int peak = 0;
+    ans += 1;
+    while (i < arr.size())
+    {
+        if(arr[i] == arr[i - 1]) {
+            ans += 1;
+            i++;
+            continue;
+        }
+        peak = 1;
+        while (i < arr.size() && arr[i] > arr[i-1])
+        {
+            peak += 1; 
+            ans += peak;
+            i++;
+        }
+        down = 1;
+        while( i < arr.size() && arr[i] < arr[i-1]){
+            ans += down;
+            i++;
+            down ++;
+        }
+        if(down > peak){
+            ans += down - peak;
+        }
+    }
+    
+    return ans;
 }
 
 int main()
