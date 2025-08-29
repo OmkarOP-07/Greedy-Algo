@@ -11,7 +11,6 @@ vector<vector<int>> insert(vector<vector<int>>& arr, vector<int>& newInt) {
         ans.push_back(arr[i]); 
         i++;
     }
-    
     while (i < n && arr[i][0] <= newInt[1]) 
     {
         newInt[0] = min(newInt[0], arr[i][0]);
