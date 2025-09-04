@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/Omkar/Codes/C++ Programs/Greedy Algo/Easy Problems",
-      "program": "e:/Omkar/Codes/C++ Programs/Greedy Algo/Easy Problems/build/Debug/outDebug",
+      "cwd": "e:/Omkar/Codes/C++ Programs/Greedy Algo/Medium, Hard problems",
+      "program": "e:/Omkar/Codes/C++ Programs/Greedy Algo/Medium, Hard problems/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
